@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>XML, XSL und RSS - Vorlesung am SAE Institute</title>
+
+		<meta name="description" content="APIs - Vorlesung am SAE Institute">
+		<meta name="author" content="Bjoern Zapadlo">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' )
+                    + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+        <style>
+            .questions .reveal .state-background {
+                background-image: url("images/tafel.jpg");
+                background-size:100% ;
+            }
+
+        </style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section>
+                    <section>
+                        <h1>XML, XSL und RSS</h1>
+                        <h3>Vorlesung am SAE Institute</h3>
+                        <h3>Dozent: Bjoern Zapadlo</h3>
+                    </section>
+
+                    <section>
+                        <h2>About me</h2>
+                        <p>
+                            Bjoern Zapadlo<br />
+                            Konstanz<br />
+                            33 Jahre
+                        </p>
+                        <p>
+                            Teamlead / Senior Software Developer HolidayCheck AG
+                        </p>
+                        <p>
+                            Informatik Studium 1999 - 2002<br />
+                            3 Agenturen in Stuttgart
+                        </p>
+                        <p>
+                            HolidayCheck International Websites / new Framework<br />
+                            Neckermann / Thomas Cook
+                        </p>
+                        <p>Dozent an der SAE, Dualen Hochschule Stuttgart, Hochschule Furtwangen</p>
+                        <p>PHP, Java, Scala, Javasccript, CSS, Html,MySQL, MongoDB, Elasticsearch, ...</p>
+                    </section>
+
+                    <section>
+                        <h2>Contact me</h2>
+                        <p>
+                            bjoern.zapadlo@gmail.com<br />
+                            http://www.zapadlo.de
+                        </p>
+                        <p>
+                            @BjoeZap
+                        </p>
+                        <p>
+                            https://www.xing.com/profile/Bjoern_Zapadlo<br />
+                            http://de.linkedin.com/pub/bjoern-zapadlo/36/889/1a5
+                        </p>
+                        <p>
+                            Facebook<br />
+                            Google+
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>HolidayCheck AG</h2>
+                        <p>
+                            Größtes deutsches Meinungsportal für Reise und Urlaub<br />
+                            Vermittlung von Reisen<br />
+                            Sitz in der Schweiz, direkt am Bodensee<br />
+                            Börsennotiert über Tomorrow Focus AG<br />
+                            Existiert seit 1999<br />
+                            Ausgründungen in mehreren europäischen Ländern<br />
+                            Über 300 Mitarbeiter<br />
+                        </p>
+                    </section>
+
+                    <section>
+                        <blink id="blinktag"><h1>Yes, we hire ;)</h1></blink>
+                        <h3>http://www.holidaycheck.de/jobs</h3>
+                        <script>
+                         var el = document.getElementById('blinktag');
+                         setInterval(function(){
+                           if ( el.style.visibility != 'hidden' ) {
+                             el.style.visibility = 'hidden';
+                           }
+                           else {
+                             el.style.visibility = '';
+                           }
+                         }, 500);
+                         </script>
+                    </section>
+
+                    <section>
+                        <h3>Jetzt aber Schluss mit der Werbung...</h3>
+                    </section>
+
+                    <section>
+                        <h2>Und ihr?</h2>
+                        <p>Name</p>
+                        <p>Erwartungen</p>
+                        <p>Wünsche</p>
+                    </section>
+
+                    <section>
+                        <h2>Agenda</h2>
+                        <ol>
+                            <li>tbd</li>
+                            <li>Misc / Q&A</li>
+                        </ol>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Main Header</h1>
+                    </section>
+
+                    <section>
+                        <h2>Header</h2>
+                        <p>
+                            Text
+                        </p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>11. Misc / Q&A</h1>
+                    </section>
+
+                    <section>
+                        <h2>Links</h2>
+                        <p>Links</p>
+                    </section>
+
+
+                    <section data-state="questions">
+                        <h1>Fragen?</h1>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>THE END</h1>
+                    <br /><br />
+                    <h3>Vielen Dank für die Aufmerksamkeit und Stimmung!</h3>
+                    <p>Made with <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '/socket.io/socket.io.js', async: true },
+                    { src: 'plugin/notes-server/client.js', async: true }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+        </script>
+
+	</body>
+</html>
