@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" ?>
+<?xml-stylesheet href="tmx_text.xsl" type="text/xsl" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+ <header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="de" srclang="de" o-tmf="abc" creationtool="XYZTool" >
+ </header>
+ <body>
+  <tu tuid="Administration">
+   <tuv xml:lang="de"><seg>Administration</seg></tuv>
+   <tuv xml:lang="en"><seg>administration</seg></tuv>
+  </tu>
+  <tu tuid="Authentifizierung">
+   <tuv xml:lang="de"><seg>Authentifizierung</seg></tuv>
+   <tuv xml:lang="en"><seg>authentication</seg></tuv>
+  </tu>
+  <tu tuid="Benutzername">
+   <tuv xml:lang="de"><seg>Benutzername</seg></tuv>
+   <tuv xml:lang="en"><seg>user name</seg></tuv>
+  </tu>
+  <tu tuid="Passwort">
+   <tuv xml:lang="de"><seg>Password</seg></tuv>
+   <tuv xml:lang="en"><seg>passwort</seg></tuv>
+  </tu>
+  <tu tuid="Nicht authentifiziert">
+   <tuv xml:lang="de"><seg>Nicht authentifiziert</seg></tuv>
+   <tuv xml:lang="en"><seg>not authenticated</seg></tuv>
+  </tu>
+ </body>
+</tmx>
