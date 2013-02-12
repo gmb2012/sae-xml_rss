@@ -140,7 +140,6 @@
                         <h2>Agenda</h2>
                         <ol>
                             <li>Warum?</li>
-                            <li>Geschichte</li>
                             <li>Aufbau</li>
                             <li>Übung XML</li>
                             <li>Validität</li>
@@ -167,19 +166,118 @@
                     <section>
                         <h2>Wer von euch hat heute schon XML benutzt?</h2>
                         <div class="fragment">
-                            <h3 class="tagcloud">Facebook</h3>
+                            <h3>Auf Facebook gewesen</h3>
+                            <h3>Adressen oder Termine auf dem Handy synchronisiert</h3>
+                            <h3>Google Earth oder Maps benutzt</h3>
+                            <h3>Ein Office Dokument geschrieben</h3>
+                            <h3>Im Internet gesurft</h3>
+                            <h3>and much more</h3>
                         </div>
                     </section>
-                </section>
 
-                <section>
                     <section>
-                        <h1>Geschichte</h1>
+                        <h2>Das Problem</h2>
+                        <h3>Strukturierung und Auszeichnung von Text</h3>
+                        <p>
+                            Das Wort <strong>fett</strong> soll fett sein
+                        </p>
+                        <p>
+                            Hier möchte ich gerne
+                            <p>
+                                einen Absatz haben
+                            </p>
+                        </p>
                     </section>
-
                     <section>
-                        <h2>SGML</h2>
-                        <p>tbd</p>
+                        <h2>Die Lösung?</h2>
+                        <pre><code>
+Das Wort FETTSTARTfettFETTSTOP soll fett sein
+
+Hier möchte ich gerneABSATZeinen Absatz haben
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Naja, fast</h2>
+                        <p>Eine spezielle Maskierung zur Abgrenzung von Nutz und Strukturierungsdaten muss her</p>
+                        <div class="fragment">
+                            <h1>Das Tag ist &lt;geboren&gt;</h1>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Auszeichnungssprachen</h2>
+                        <p>
+                            Eine Auszeichnungssprache (englisch: Markup Language, ML) dient zur Beschreibung des Inhalts eines Dokumentenformates und
+                            teilweise zur Beschreibung des Verfahrens, welches zur Bearbeitung dieser Daten benötigt wird.
+                            Ursprünglich dienten die Auszeichnungen im Text als Anweisungen für die Setzer im Drucksatz, mit der Weiterentwicklung in
+                            der Typografie für digitale Texte wurden daraus jedoch komplexe Sprachen.
+                        </p>
+                    </section>
+                    <section>
+                        <p>Sind keine Programmiersprachen (PHP, ...) <span class="fragment">meistens ;)</span></p>
+                        <div class="fragment">
+                            <p>Können trotzdem sehr komplex sein</p>
+                        </div>
+                        <div class="fragment">
+                            <p>Sind Dank des Internets sehr populär</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Was kann XML?</h2>
+                        <h3>Semantik</h3>
+                        <p>Durch die Auszeichnung wird z.B. eine Überschrift zur Überschrift</p>
+                        <div class="fragment">
+                            <h3>Maschinenlesbarkeit</h3>
+                            <p>Durch die Auszeichnung kann eine (Such)Maschine Texte und deren Bedeutung interpretieren</p>
+                        </div>
+                        <div class="fragment">
+                            <h3>Menschenlesbarkeit</h3>
+                            <p>Okay, es gibt Sachen, die machen mehr Spass</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Wofür</h2>
+                        <div class="fragment">
+                            <p>Datenaustausch (in heterogenen Systemen)</p>
+                            <p>Datenbankersatz</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Vor- & Nachteile</h2>
+                        <h3>Vorteile</h3>
+                        <p>Einfach & Flexibel</p>
+                        <p>Menschen und Maschinenlesbar</p>
+                        <p>Es ist Text</p>
+                        <h3>Nachteile</h3>
+                        <p>Es ist Text: Encoding, Escaping von Steuerzeichen</p>
+                        <p>Kann Komplex werden</p>
+                        <p>Performance</p>
+                        <p>Overhead</p>
+                    </section>
+                    <section>
+                        <h2>Geschichte von XML</h2>
+                        <p>
+                            Vorgänger SGML (ISO 8879:1986):<br />
+                            Standard Generalized Markup Language<br />
+                            IBM Forschungsprojekt<br />
+                            sehr flexibel aber komplex und performancehungrig
+                        </p>
+                        <p>
+                            1989 für das CERN HTML<br />
+                            Tim Berners-Lee<br />
+                            Einfach, aber unsauber, extreme Verbreitung<br />
+                            Versionschaos, dann Standartisierung durch das W3C<br />
+                        </p>
+                        <p>
+                            Parallel XML<br />
+                            Vereinfachtes SGML
+                        </p>
+                        <p>XML + HTML = XHTML</p>
+                    </section>
+                    <section>
+                        <h2>Standards</h2>
+                        <p>Standardisiert vom W3C</p>
+                        <p>1.0 (5th Edition)</p>
+                        <p>1.1 (2nd Edition)</p>
                     </section>
                 </section>
 
