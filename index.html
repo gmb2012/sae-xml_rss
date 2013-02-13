@@ -147,12 +147,12 @@
                             <li>Suchen</li>
                             <li>Transformation</li>
                             <li>Namensräume</li>
-                            <li>Was gibt's da noch?</li>
-                            <li>Exkurs: JSON</li>
+                            <li>XML-Sprachen</li>
                             <li>Einsatzgebiete</li>
                             <li>XHTML</li>
                             <li>RSS</li>
                             <li>Übung RSS</li>
+                            <li>Exkurs: JSON</li>
                             <li>Misc / Q&A</li>
                         </ol>
                     </section>
@@ -369,7 +369,108 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
                     <section>
                         <h2>Logische Struktur</h2>
-                        <p>tbd</p>
+                        <p>Der logische Aufbau entspricht einer Baumstruktur und ist damit hierarchisch organisiert.</p>
+                        <div class="fragment">
+                            <h3>Verarbeitungsanweisung</h3>
+                            <p>
+                                Verarbeitungsanweisung (engl. processing instruction) oder auch Steueranweisung ist ein Konstrukt von SGML und XML,
+                                um Daten abzulegen, die an eine bestimmte (XML-)Anwendung gerichtet ist.
+                            </p>
+                            <p>Eine XML-Deklaration ist keine Verarbeitungsanweisung, auch wenn sie genauso aussieht.</p>
+                            <pre><code class="xml">
+&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;show_book.xsl&quot;?&gt;
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Elemente</h3>
+                        <p>Auszeichnung via Start- und End-Tag oder einem sog. Empty-Element-Tag</p>
+                        <pre><code class="xml">
+&lt;Tag-Name&gt;&lt;/Tag-Name&gt;
+&lt;Empty-Element /&gt;
+                        </code></pre>
+
+                        <div class="fragment">
+                            <h3>Attribute</h3>
+                            <p>
+                                Attribute als bei einem Start-Tag oder Empty-Element-Tag geschriebene Schlüsselwort-Werte-Paare (Attribut-Name="Attribut-Wert")
+                                für Zusatz-Informationen über Elemente
+                            </p>
+                            <pre><code class="xml">
+    &lt;Tag-Name attribute-key=&quot;attribute-value&quot;&gt;&lt;/Tag-Name&gt;
+    &lt;Empty-Element attribute-key=&quot;attribute-value&quot; /&gt;
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Text</h3>
+                        <p>Normaler Text ;) bzw. die Nutzinformation</p>
+                        <pre><code class="xml">
+&lt;Tag-Name&gt;ganz normaler Text&lt;/Tag-Name&gt;
+                        </code></pre>
+
+                        <div class="fragment">
+                            <h3>CDATA</h3>
+                            <p>
+                                Mit einem CDATA(Akronym für engl. character data „Zeichendaten“)-Abschnitt wird einem Parser mitgeteilt, dass kein Markup folgt, sondern normaler Text.
+                                Dieser wird nicht interpretiert und kann daher auch "illegales" XML (Tags, Sonderzeichen, ...) enthalten.
+                            </p>
+                            <pre><code class="xml">
+&lt;Tag-Name&gt;
+    &lt;![CDATA[ Inhalt ]]&gt;
+&lt;/Tag-Name&gt;
+&lt;Tag-Name&gt;
+    &lt;![CDATA[ Inhalt]] ]]&gt;&lt;![CDATA[ &gt;Inhalt ]]&gt;
+&lt;/Tag-Name&gt;
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Kommentare</h3>
+                        <pre><code class="xml">
+&lt;!-- Kommentar-Text --&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Regeln für XML</h2>
+                        <p>XML-Deklaration muss vorhanden sein</p>
+                        <p>
+                            Baumstruktur muss eingehalten werden:<br />
+                            Wurzelelement darf genau einmal vorhanden sein<br />
+                            Tags müssen geschlossen und die korrekte Verschachtelung muss eingehalten werden<br />
+                            XML ist „Case Sensitive“ und nicht auf ASCII beschränkt
+                        </p>
+                        <p>Kommentare müsssen korrekt sein</p>
+                        <p>Der Zeichensatz sollte angegeben werden</p>
+                        <div class="fragment">
+                            <h3>"Wohlgeformt"</h3>
+                            <p>
+                                Wenn keine Regel Verletzt wird.<br />
+                                Prüfung erfolgt durch den XML-Parser
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Klassifizierung</h2>
+                        <h3>dokumentzentriert</h3>
+                        <p>
+                            Das Dokument ist an ein Textdokument angelehnt, das für den menschlichen Leser größtenteils auch ohne die zusätzliche Metainformation verständlich ist.
+                            XML-Elemente werden hauptsächlich zur semantischen Markierung von Passagen des Dokuments genutzt, das Dokument ist nur schwach strukturiert.
+                            Aufgrund der schwachen Strukturierung ist eine maschinelle Verarbeitung schwierig.
+                        </p>
+                        <h3>datenzentriert</h3>
+                        <p>
+                            Das Dokument ist hauptsächlich für die maschinelle Verarbeitung bestimmt.
+                            Es folgt einem Schema, das Entitäten eines Datenmodells beschreibt und definiert, in welcher Beziehung die Entitäten zueinander stehen,
+                            sowie, welche Attribute die Entitäten haben. Das Dokument ist somit stark strukturiert und für den unmittelbaren menschlichen Gebrauch weniger geeignet.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>semistrukturiert</h3>
+                        <p>
+                            Semistrukturierte Dokumente stellen eine Art Mischform dar, die stärker strukturiert ist als dokumentzentrierte Dokumente,
+                            aber schwächer als datenzentrierte Dokumente.
+                        </p>
                     </section>
                 </section>
 
@@ -379,8 +480,10 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p>tbd</p>
+                        <h3>PHP: Zugriff via DOM</h3>
+                        <h3>PHP: Zugriff via Simple-XML</h3>
+                        <h3>Javascript: Zugriff via AJAX & native JS</h3>
+                        <h3>Javascript: Zugriff via JQUERY</h3>
                     </section>
                 </section>
 
@@ -390,8 +493,13 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p>tbd</p>
+                        <h2>Definition</h2>
+                        <p>
+                            Soll XML für den Datenaustausch verwendet werden, ist es von Vorteil,
+                            wenn das Format mittels einer Grammatik (z. B. einer Dokumenttypdefinition oder eines XML-Schemas) definiert ist.
+                            Der Standard definiert ein XML-Dokument als gültig (oder englisch valid), wenn es <strong>wohlgeformt</strong> ist,
+                            den <strong>Verweis auf eine Grammatik enthält</strong> und das durch die Grammatik beschriebene <strong>Format einhält</strong>.
+                        </p>
                     </section>
                 </section>
 
@@ -429,36 +537,61 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                 </section>
 
                 <section>
-                   <section>
-                       <h1>Namensräume</h1>
-                   </section>
+                    <section>
+                        <h1>Namensräume</h1>
+                    </section>
 
-                   <section>
-                       <h2></h2>
-                       <p></p>
-                   </section>
-                </section>
+                    <section>
+                        <h2>Problemstellung</h2>
+                        <p>Mischung mehrere XML-Sprachen in einem Dokument.</p>
+                        <p>Überschneidung bei den Tag-Names</p>
+                        <p>Wer soll welches Tag bearbeiten</p>
+                        <p>Siehe Telefon-Vorwahl ;)</p>
+                        <p>Vorsicht: DTDs unterstützen dies nicht</p>
+                    </section>
+                    <section>
+                        <pre><code class="xml">
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+    xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;&gt;
 
-                <section>
-                   <section>
-                       <h1>Was gibt's da noch?</h1>
-                   </section>
+...
 
-                   <section>
-                       <h2></h2>
-                       <p></p>
-                   </section>
+&lt;p&gt;Und noch ein kleines Bild dazu:&lt;/p&gt;
+
+&lt;svg:svg&gt;
+    &lt;svg:rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;1&quot;  height=&quot;1&quot; /&gt;
+&lt;/svg:svg&gt;
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section>
                     <section>
-                        <h1>Exkurs: JSON</h1>
+                        <h1>XML-Sprachen</h1>
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p></p>
+                        <p>
+                            Im Zusammenhang mit XML wurden vom W3-Konsortium auf Basis von XML viele Sprachen definiert,
+                            welche XML-Ausdrücke für häufig benötigte allgemeine Funktionen anbieten wie etwa die Verknüpfung von XML-Dokumenten.
+                            Zahlreiche XML-Sprachen nutzen diese Grundbausteine.
+                        </p>
                     </section>
+                    <section>
+                        <p>Verknüpfung von XML-Ressourcen: XPointer, XLink und XInclude</p>
+                        <p>Selektion von Daten aus einem XML-Datensatz: XQuery</p>
+                        <p>Datenmanipulation in einem XML-Datensatz: XUpdate</p>
+                        <p>Abfassen von elektronischen Formularen: XForms</p>
+                        <p>Definition von XML-Datenstrukturen: XML Schema (= XSD, XML Schema Definition Language), DTD und RELAX NG</p>
+                    </section>
+                    <section>
+                        <p>Signatur und Verschlüsselung von XML-Knoten: XML Signature und XML-Encryption</p>
+                        <p>Aussagen zum formellen Informationsgehalt: XML Infoset</p>
+                        <p>Formatierte Darstellung von XML-Daten: XSL-FO</p>
+                        <p>Definition zum Methoden- bzw. Funktionsaufruf durch verteilte Systeme: XML-RPC</p>
+                        <p>Standardisierte Attribute: XML Base und ID (DTD)</p>
+                        <p>XML-basierte deklarative Programmiersprache: MXML</p>
+                   </section>
                 </section>
 
                 <section>
@@ -467,8 +600,75 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p></p>
+                        <h3>Text</h3>
+                        <p>
+                            DocBook<br />
+                            DITA<br />
+                            XHTML (XML-konformes HTML)<br />
+                            TEI (Text Encoding Initiative)<br />
+                            NITF (News Industry Text Format)<br />
+                            OPML (Outline Processor Markup Language)<br />
+                            OSIS (Open Scripture Information Standard)<br />
+                            OpenDocument-Austauschformat (OASIS Open Document Format for Office Applications)
+                        </p>
+                        <h3>Grafik</h3>
+                        <p>
+                            SVG (Vektorgrafiken)<br />
+                            X3D (3D-Modellierungssprache)<br />
+                            Collada (Austauschformat für Daten zwischen verschiedenen 3D-Programmen)
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Geodaten</h3>
+                        <p>
+                            Geography Markup Language (GML)<br />
+                            GPS Exchange Format (GPX): XML für GPS-Daten<br />
+                            Keyhole Markup Language (KML): Koordinaten-Spezifikation für Google Earth<br />
+                            City Geography Markup Language (CityGML)<br />
+                            OpenStreetMap (OSM)
+                        </p>
+                        <h3>Multimedia</h3>
+                        <p>
+                            MusicXML (Notendaten, aufgeschriebene Musik)<br />
+                            SMIL (zeitsynchronisierte, multimediale Inhalte)<br />
+                            MPEG-7 (MPEG-7 Metadaten)<br />
+                            Laszlo (LZX)
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Sicherheit</h3>
+                        <p>
+                            Security Assertion Markup Language (sicherheitsbezogene Informationen beschreiben und übertragen)<br />
+                            XML Signature (XML-Schreibweise für digitale Signaturen)<br />
+                            XML Encryption
+                        </p>
+                        <h3>Ingenieurwissenschaften</h3>
+                        <p>
+                           AutomationML, ein Format zur Speicherung von Anlagenplanungsdaten<br />
+                            CAEX, ein Format zur Speicherung hierarchischer Objektinformationen<br />
+                            GSDML, ein Format zur Beschreibung von Automatisierungsgeräten, die mit Profinet kommunizieren können<br />
+                            IODD, ein Format zur Beschreibung von Sensoren und Aktoren
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Weitere</h3>
+                        <p>
+                            Webservices (z. B. SOAP, WSDL und WS-*)<br />
+                            Einbindung von Java-Code in XML-Dokumente (XSP)<br />
+                            Synchronisation von Kalenderdaten SyncML<br />
+                            mathematische Formeln (MathML)<br />
+                            Repräsentation von Graphen (GraphML)<br />
+                            Verfahren im Bereich des Semantischen Webs (RDF, OWL, Topic Maps, UOML)<br />
+                            Service Provisioning (SPML)<br />
+                            Austausch von Nachrichten (XMPP)<br />
+                            Finanzberichten wie bspw. Jahresabschlüssen (XBRL)<br />
+                            Automobilindustrie (ODX, MSRSW, AUTOSAR-Templates, QDX, JADM)<br />
+                            automatisierter Test z. B. von Schaltkreisen (ATML)<br />
+                            Landwirtschaft (AgroXML)<br />
+                            Verlagswesen (ONIX)<br />
+                            Chemie (CIDX) <br />
+                            ...
+                        </p>
                     </section>
                 </section>
 
@@ -489,8 +689,51 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p></p>
+                        <p>
+                            RSS ist eine seit dem Anfang des Jahres 2000 kontinuierlich weiterentwickelte Familie von Formaten für die einfache und strukturierte Veröffentlichung von
+                            Änderungen auf Websites in einem standardisierten Format.
+                        </p>
+                        <p>XML-basiert</p>
+                        <p>Quasi-Standard (zusammen mit Atom)</p>
+                        <p>Feeds sind meist in Channels organisiert</p>
+                        <p>Rich Site Summary vs. RDF Site Summary vs. Really Simple Syndication</p>
+                    </section>
+                    <section>
+                        <h2>Versionen</h2>
+                        <h3>1999: RSS 0.90</h3>
+                        <p>Erfinder: Netscape, basiert auf RDF (Resource Description Framework)</p>
+                        <h3>2000: RSS 0.91 - 0.94</h3>
+                        <p>basiert auf einfachem XML</p>
+                        <h3>2000: RSS 1.0</h3>
+                        <p>wieder RDF-basiert</p>
+                        <h3>2002: RSS 2.0</h3>
+                        <p>Basis ist 0.91, nicht RDF-basiert, Quasi-Standard, nicht vollständig abwärtskompatibel</p>
+                    </section>
+                    <section>
+                        <h2>Software</h2>
+                        <p>Blog-Software, z.B. Wordpress, um einen Feed anzubieten</p>
+                        <p>Firefox für Live-Bookmarks</p>
+                        <p>RSSReader (NewsRob, ...), zum on- und offline lesen</p>
+                        <p>Aggregation mehrere Newsfeeds z.B. per GoogleReader</p>
+                    </section>
+                    <section>
+                        <h2>Aufbau</h2>
+                        <p>tbd</p>
+                    </section>
+                    <section>
+                        <h2>Atom</h2>
+                        <p>Atom Syndication Format (ASF)  wird entwickelt, um die Nachfolge von RSS antreten</p>
+                        <p>
+                            Atom entstand aus dem Bedürfnis heraus, die Vorteile der unterschiedlichen RSS-Formate in einem neuen Format zusammenzufassen und um neue Elemente zu ergänzen.
+                            Dabei haben die Entwickler – in überwiegender Mehrzahl Blogger – ASF auch so gestaltet,
+                            um den speziellen Bedürfnissen von Weblogs und Nachrichtenseiten gerecht zu werden.
+                            Die maßgeblichen Unterstützer von Atom sind in der Industrievereinigung AtomEnabled Alliance organisiert.
+                        </p>
+                        <p>
+                            Die aktuelle Version des Atom Syndication Formats ist der IETF-Entwurf vom 11. August 2005,
+                            welcher von der IESG im August 2005 als Proposed Standard verabschiedet und im Dezember 2005 als RFC 4287 veröffentlicht wurde.
+                            Die meisten größeren Feed-Anbieter arbeiten bereits daran, das Format zu unterstützen. Der MIME-Typ von Atom ist application/atom+xml.
+                        </p>
                     </section>
                 </section>
 
@@ -500,8 +743,41 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p></p>
+                        <h3>PHP: Erstellen eines RSS 2.0 Feeds</h3>
+                        <h3>PHP: Auslesen eines RSS 2.0 Feeds</h3>
+                        <h3>Javascript: Auslesen eines RSS 2.0 Feeds (JQuery)</h3>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Exkurs: JSON</h1>
+                    </section>
+
+                    <section>
+                        <p>Javascript Object Notation</p>
+                        <p>Kurzschreibweise für Javascript Objekte</p>
+                        <p>Sehr einfach</p>
+                        <p>Kaum overhead</p>
+                        <p>Native Unterstützung in vielen Programmiersprachen</p>
+                    </section>
+                    <section>
+                        <h2>JSON - Beispiel</h2>
+                        <pre><code class="javascript">
+{
+    "titel": "Wikipedia Städteverzeichnis",
+    "eintrag": [
+        {
+            "stichwort": "Genf",
+            "eintragstext": "Genf ist der Sitz von ..."
+        },
+        {
+            "stichwort": "Köln",
+            "eintragstext": "Köln ist eine Stadt, die ..."
+        }
+    ]
+}
+                        </code></pre>
                     </section>
                 </section>
 
@@ -512,7 +788,7 @@ Hier möchte ich gerneABSATZeinen Absatz haben
 
                     <section>
                         <h2>Links</h2>
-                        <p>Links</p>
+                        <p>Wikipedia</p>
                     </section>
 
 

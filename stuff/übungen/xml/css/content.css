@@ -1,0 +1,267 @@
+
+h1, h2 {
+   	font-family: Verdana;
+   	border-top: 1px dotted #999999;
+   	border-bottom: 1px dotted #999999;
+	padding: 0.4em 1em 0.4em 1em;
+   	font-size: 1.1em; }
+
+#MainMenu, #MainMenu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    }
+
+#MainMenu li {
+    height:21px;
+    padding:0px 0px 0px 0px;
+    display:inline;
+    }
+
+#MainMenu li h1 {
+    font-size: 0.85em;
+    padding:2px 0px 2px 15px;
+    margin: 0;
+    border-top: 1px solid #AAAAAA;
+    border-left: 1px solid #AAAAAA;
+    border-bottom: 1px solid #999999;
+    border-right: 1px solid #999999;
+    background-color: #cccccc;
+    }
+
+#MainMenu a:link, #MainMenu a:visited {
+    padding: 5px 0px 4px 20px;
+    display: block;
+    text-decoration: none;
+    border: 1px solid #777777;
+    background-color: #999999;
+    color: white;
+    font-size: 0.8em;
+    }
+
+#MainMenu a:hover {
+    background-color: #885555;
+    }
+
+#Infobox {
+    float: right;
+    width: 178px;
+    font-size: 0.7em;
+    padding-bottom: 10px;
+    border:1px solid gray;
+    margin-top: 0px;
+    background-color: #885555;
+    }
+
+#Infobox div {
+    padding: 10px;
+    }
+
+#Infobox h1 {
+    font-size: 1.2em;
+    margin: 0;
+    background-color: #999999;
+    padding: 6px 0 8px 15px;
+    }
+
+#Infobox h1 img {
+    float: right;
+    margin-right: 2px;
+    }
+
+#Infobox p, #Infobox ul {
+    color: white;
+    font-weight: bold;
+    }
+
+#Infobox p {
+    padding: 10px;
+
+    }
+
+ul.poll {
+	list-style: none;
+	}
+
+ul.poll li {
+	font-size: 1.2em;
+	padding: 2px 0 2px 0;
+	}
+
+ul.poll input {
+	vertical-align: middle;
+	}
+
+/* Content Tables */
+table {
+
+/*    border-right: 1px solid #999999; */
+/*
+	border-left: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+    font-family:  Arial,Verdana, Helvetica, sans-serif;
+*/
+    }
+
+table.ObjectView {
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 60em;
+    }
+
+caption {
+    border: 1px solid #8999a9;
+    border-top: 1px solid #697989;
+    border-left: 1px solid #697989;
+    border-bottom: 1px solid #8999a9;
+    background-color: #b1c2d3;
+    text-align: left;
+    color: #000000;
+    padding: 0.3em 0.5em 0.3em 1em;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin-top: 1px;
+    width: auto;
+	min-height: 1.5em;
+    }
+
+th, td {
+    border: 1px solid #8999a9;
+    border-top: 1px solid #697989;
+    border-left: 1px solid #997989;
+    border-bottom: 1px solid #8999a9;
+    color: inherit;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 0.2em 0.5em 0.2em 1em;
+    font-size: 1em;
+    text-align: left;
+    vertical-align: middle;
+    }
+
+table.ObjectView th {
+	background-color: #dddddd; }
+
+td {
+    vertical-align: top;
+    background-color:#f0f0f0;
+    }
+
+td.Number {
+	text-align: right;
+	}
+
+
+.inputError {
+	border: 1px solid firebrick;
+	}
+
+.alignRight {
+	text-align: right;
+	}
+/* forms */
+input.medium {
+	width: 7em;
+	}
+.indent {
+	margin-left: 3.8em;
+	}
+
+/* forms with fieldsets and elements grouped by ul/li */
+fieldset.framed {
+	float: left;
+	width: 35em; }
+
+div.formSection {
+	width: 74.1em;
+	clear: both; }
+
+fieldset ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.9em;
+	font-family: Verdana,Helvetica,Arial, sans-serif;
+	}
+
+legend {
+	font-weight: bold;
+	border: 1px solid gray;
+	padding: 0 0.5em 0 0.5em;
+	}
+
+fieldset label {
+	vertical-align: top;
+	}
+
+fieldset ol label, span.label {
+	display: -moz-inline-box;
+	display: inline-block;
+	width: 12em;
+	}
+
+span.value {
+	display: -moz-inline-box;
+	display: inline-block;
+	height: 1.5em;
+	font-weight: bold;
+	}
+
+/* value */
+
+fieldset fieldset label {
+	display: block;
+	width: auto;
+	}
+
+div.multipleOptions {
+	width: auto;
+	height: 18em;
+	overflow: auto; }
+
+div.multipleOptions.autoSized {
+	height: auto; }
+
+.highlightedOption {
+	font-weight: bold; }
+
+.linkButton {
+    border: 1px solid #777777;
+    border-top: 1px solid #b0b0b0;
+    border-left: 1px solid #b0b0b0;
+    border-bottom: 1px solid #777777;
+    padding: 0.1em 0.6em 0.1em 0.6em;
+    }
+
+.clickable {
+	cursor: pointer; }
+
+fieldset.searchInterface {
+	border: none; }
+
+fieldset.searchInterface li {
+	float: left; }
+
+fieldset.searchInterface label {
+	display: block; }
+
+fieldset.searchInterface select {
+	display: block; }
+
+div.inlineBar {
+	padding: 0.2em;
+	background-color: #5F89C1;
+	border: 1px solid #4F79B1;
+	}
+
+div.inlineBar {
+	padding-left: 1em;
+	height: 1.2em; }
+
+div.inlineBar span {
+	color: white;
+	font-weight: bold;
+	float: left; }
+
+div.inlineBar img {
+	float: right; }

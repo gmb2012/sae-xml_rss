@@ -1,0 +1,22 @@
+﻿body {
+  display: table;
+  margin: 1em;
+  border: 1px solid #999999;
+  border-collapse: collapse;
+  }
+
+tu {
+  display: table-row;
+  padding: 0.2em;
+  }
+
+tuv {
+  display: table-cell;
+  border: 1px solid #999999;
+  padding: 0.2em 0.3em 0.2em 0.5em;
+  }
+
+tuv:first-child {
+  font-weight: bold;
+  background-color: lightblue;
+  }
