@@ -287,7 +287,88 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
+                        <h2>Das erste XML Dokument</h2>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;verzeichnis&gt;
+    &lt;titel&gt;Wikipedia St&auml;dteverzeichnis&lt;/titel&gt;
+        &lt;eintrag&gt;
+            &lt;stichwort&gt;Genf&lt;/stichwort&gt
+            &lt;eintragstext&gt;Genf ist der Sitz von ...&lt;/eintragstext&gt;
+        &lt;/eintrag&gt;
+        &lt;eintrag&gt;
+            &lt;stichwort&gt;K&ouml;ln&lt;/stichwort&gt;
+            &lt;eintragstext&gt;K&ouml;ln ist eine Stadt, die ...&lt;/eintragstext&gt;
+        &lt;/eintrag&gt;
+&lt;/verzeichnis&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Physische Strukutur</h2>
+                        <h3>XML-Deklaration</h3>
+                        <p>Eine XML-Deklaration ist eine Erkennungszeichenfolge im Prolog einer XML-Datei</p>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <p>
+                            <h4>version="1.0"</h4>
+                            definiert die Versionsnummer der zugrundeliegenden XML-Spezifikation. Sinnvolle Werte sind momentan 1.0 und 1.1. Der Parameter version muss stets angegeben werden.
+                        </p>
+                        <p>
+                            <h4>encoding="Zeichenkodierung"</h4>
+                            bestimmt die Kodierung der XML-Datei. Wird dieser Parameter ausgelassen, wird UTF-8 angenommen. Zu beachten ist, dass der Wert von encoding vom Parser unterstützt werden muss.
+                        </p>
+                        <p>
+                            <h4>standalone="yes|no"</h4>
+                            Eher selten verwendet. Gültige Werte sind yes oder no. Wird der Parameter standalone ausgelassen, wird der Standardwert no angenommen.
+                            Der Attributwert yes wird verwendet, wenn ein Dokument über keine DTD verfügt. Des Weiteren kann sich die DTD auch in derselben Datei befinden.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Entitäten</h3>
+                        <p>Die XML-Datei selbst</p>
+                        <div class="fragment">
+                            <h3>Entitätenreferenzen</h3>
+                            <p>Verknüpfungen auf wiederkehrende Zeichenketten und ganze Dateien</p>
+                            <p>
+                                <h4>Standard-Entitäten:</h4>
+                                &amp;apos; = '<br />
+                                &amp;amp; = &<br />
+                                &amp;quot; = "<br />
+                                &amp;lt; = &lt;<br />
+                                &amp;gt; = &gt;<br />
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Entitätenreferenzen</h3>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;!ENTITY c &quot;Chris&quot;&gt;
+&lt;!ENTITY chap1 SYSTEM &quot;chapter-1.xml&quot;&gt;
+&lt;verzeichnis&gt;
+    &lt;titel&gt;Hallo &c;&lt;/titel&gt;
+    &lt;!-- Pull in the chapter content: --&gt;
+    &amp;chap1;
+&lt;/verzeichnis&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>DTD</h3>
+                        <p>
+                            Eine Dokumenttypdefinition (englisch Document Type Definition, DTD, auch Schema-Definition oder DOCTYPE) ist ein Satz an Regeln,
+                            der benutzt wird, um Dokumente eines bestimmten Typs zu deklarieren.
+                        </p>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE hallo SYSTEM &quot;hallo.dtd&quot;&gt;
+&lt;hallo&gt;Hallo Welt!&lt;/hallo&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Logische Struktur</h2>
                         <p>tbd</p>
                     </section>
                 </section>
