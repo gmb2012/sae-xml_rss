@@ -37,6 +37,11 @@
                 background-size:100% ;
             }
 
+            .transformers .reveal .state-background {
+                background-image: url("images/transformers.jpg");
+                background-size:100% ;
+            }
+
         </style>
 
 	</head>
@@ -501,7 +506,88 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                             den <strong>Verweis auf eine Grammatik enthält</strong> und das durch die Grammatik beschriebene <strong>Format einhält</strong>.
                         </p>
                     </section>
+                    <section>
+                        <h2>DTD</h2>
+                        <p>
+                            Eine Dokumenttypdefinition (englisch Document Type Definition, DTD, auch Schema-Definition oder DOCTYPE) ist ein Satz an Regeln, der benutzt wird,
+                            um Dokumente eines bestimmten Typs zu deklarieren.
+                            Ein Dokumenttyp ist dabei eine Klasse ähnlicher Dokumente, wie beispielsweise Telefonbücher oder Inventurdatensätze.
+                            Die Dokumenttypdefinition besteht dabei aus Elementtypen, Attributen von Elementen, Entitäten und Notationen.
+                        </p>
+                        <p>
+                            Konkret heißt das, dass in einer DTD die Reihenfolge, die Verschachtelung der Elemente und die Art des Inhalts von Attributen festgelegt wird – kurz gesagt:
+                            die Struktur des Dokuments.
+                        </p>
+                        <p>
+                            Diese können direkt im XML-Dokument definiert werden oder von dort verlinkt werden.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument</h3>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE  Person SYSTEM &quot;toll.dtd&quot;&gt;
+
+&lt;Person&gt;
+    &lt;Name&gt;Manfred M&uuml;ller&lt;/Name&gt;
+    &lt;Kind&gt;
+        &lt;Name&gt;Olivia M&uuml;ller&lt;/Name&gt;
+    &lt;/Kind&gt;
+    &lt;Kind&gt;
+        &lt;Name&gt;Marc M&uuml;ller&lt;/Name&gt;
+    &lt;/Kind&gt;
+&lt;/Person
+                        </code></pre>
+                        <h3>DTD</h3>
+                        <pre><code class="xml">
+&lt;!ELEMENT Person (Name, Kind*)&gt;
+&lt;!ELEMENT Kind (Name)&gt;
+&lt;!ELEMENT Name (#PCDATA)&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                       <h3>Aha...</h3>
+                       <p>
+                           Diese DTD sagt aus, dass es ein Element Person gibt, mit den Unterelementen Name und Kind, wobei Kind öfter als einmal vorkommen darf.<br />
+                           Desweiteren bestimmt diese DTD, dass Name mit Text oder weiteren Unterknoten gefüllt sein darf während CDATA für reinen Text steht.
+                       </p>
+                    </section>
+                    <section>
+                        <h2>XSD</h2>
+                        <p>
+                            XML Schema, abgekürzt XSD (XML Schema Definition), ist eine Empfehlung des W3C zum Definieren von Strukturen für XML-Dokumente.
+                            Anders als bei den klassischen XML-DTDs wird die Struktur in Form eines XML-Dokuments beschrieben.
+                            Darüber hinaus wird eine große Anzahl von Datentypen unterstützt.
+                        </p>
+                        <p>
+                            XML Schema beschreibt in einer komplexen Schemasprache Datentypen, einzelne XML-Schema-Instanzen (Dokumente) und Gruppen solcher Instanzen.
+                            Ein konkretes XML Schema wird auch als eine XSD (XML Schema Definition) bezeichnet und hat als Datei üblicherweise die Endung „.xsd“.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument</h3>
+                        <pre><code class="xml">
+...
+&lt;pc-Typ&gt;
+    &lt;name&gt;Ein Name, aber Element ist optional&lt;/name&gt;
+    &lt;hersteller&gt;Ein Hersteller, aber Element ist optional&lt;/hersteller&gt;
+    &lt;id&gt;123&lt;/id&gt;
+&lt;/pc-Typ&gt;
+...
+                        </code></pre>
+                        <h3>XSD</h3>
+                        <pre><code class="xml">
+&lt;xsd:complexType name=&quot;pc-Typ&quot;&gt;
+  &lt;xsd:sequence&gt;
+    &lt;xsd:element name=&quot;name&quot; type=&quot;xsd:string&quot;/&gt;
+    &lt;xsd:element name=&quot;hersteller&quot; type=&quot;xsd:string&quot;/&gt;
+  &lt;/xsd:sequence&gt;
+  &lt;xsd:attribute name=&quot;id&quot; type=&quot;xsd:integer&quot;/&gt;
+&lt;/xsd:complexType&gt;
+                        </code></pre>
+                    </section>
                 </section>
+
 
                 <section>
                     <section>
@@ -509,8 +595,53 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p>tbd</p>
+                        <h2>XML und CSS</h2>
+                        <p>
+                            Analog zu Html lassen sich auch XML Dokument mit CSS stylen.
+                            Die Interpretation erfolgt dann z.B. per Browser, welcher XML darstellen kann.
+                            Allerdings ist das ein eher ungebräuchlicher Ansatz.
+                        </p>
+                        <p>
+                            <a href="stuff/xml_css/cd_catalog_with_css.xml" target="_blank">So sieht es aus...</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument</h3>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;cd_catalog.css&quot;?&gt;
+&lt;CATALOG&gt;
+  &lt;CD&gt;
+    &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;
+    &lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;
+    &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+    &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;
+    &lt;PRICE&gt;10.90&lt;/PRICE&gt;
+    &lt;YEAR&gt;1985&lt;/YEAR&gt;
+  &lt;/CD&gt;
+.
+.
+.
+&lt;/CATALOG&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>CSS-Datei</h3>
+                        <pre><code class="css">
+CATALOG {
+    background-color: #ffffff;
+    width: 100%;
+}
+CD {
+    display: block;
+    margin-bottom: 30pt;
+    margin-left: 0;
+}
+TITLE {
+    color: #FF0000;
+    font-size: 20pt;
+}
+                     </code></pre>
                     </section>
                 </section>
 
@@ -520,20 +651,189 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p>tbd</p>
+                        <h2>XPath</h2>
+                        <p>
+                            Die XML Path Language (XPath) ist eine vom W3-Konsortium entwickelte Abfragesprache, um Teile eines XML-Dokumentes zu adressieren.
+                            XPath dient als Grundlage einer Reihe weiterer Standards wie XSLT, XPointer und XQuery.
+                        </p>
+                        <p>
+                            Ein XPath-Ausdruck adressiert Teile eines XML-Dokuments, das dabei als Baum betrachtet wird.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument</h3>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+&lt;dok&gt;
+    &lt;kap title=&quot;Nettes Kapitel&quot;&gt;
+        &lt;pa&gt;Ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Noch ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Und noch ein Absatz&lt;/pa&gt;
+        &lt;pa&gt;Nett, oder?&lt;/pa&gt;
+    &lt;/kap&gt;
+    &lt;kap title=&quot;Zweites Kapitel&quot;&gt;
+        &lt;pa&gt;Ein Absatz&lt;/pa&gt;
+        &lt;pa format=&quot;bold&quot;&gt;Erste Zeile&lt;/pa&gt;
+        &lt;pa format=&quot;bold&quot;&gt;Zweite Zeile&lt;/pa&gt;
+        &lt;pa format=&quot;italic&quot;&gt;Dritte Zeile&lt;/pa&gt;
+    &lt;/kap&gt;
+&lt;/dok&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>XPath Beispiele</h3>
+                        <table class="wikitable">
+                        <tr>
+                            <th>Ausdruck</th>
+                            <th>selektiert ...</th>
+                        </tr>
+                        <tr>
+                            <td><code>/dok</code></td>
+                            <td>das erste Element <code>dok</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>/*</code></td>
+                            <td>das Wurzel-Element unabhängig vom Namen (jedes wohlgeformte XML-Dokument hat genau <em>ein</em> Wurzel-Element)</td>
+                        </tr>
+                        <tr>
+                            <td><code>//dok/kap</code></td>
+                            <td>alle <code>kap</code>-Elemente innerhalb eines <code>dok</code> Elements</td>
+                        </tr>
+                        <tr>
+                            <td><code>//dok/kap[1]</code></td>
+                            <td>erstes <code>kap</code>-Element innerhalb eines <code>dok</code> Elements</td>
+                        </tr>
+                        <tr>
+                            <td><code>//pa</code></td>
+                            <td>alle <code>pa</code>-Elemente auf allen Ebenen</td>
+                        </tr>
+                        <tr>
+                            <td><code>//kap[@title='Nettes Kapitel']/pa</code></td>
+                            <td>alle Absätze der Kapitel mit Titel „Nettes Kapitel“.</td>
+                        </tr>
+                        <tr>
+                            <td><code>//kap/pa[2]</code></td>
+                            <td>Jeweils das zweite pa-Element in den beiden Kapiteln.</td>
+                        </tr>
+                        <tr>
+                            <td><code>//kap[2]/pa[2][@format='bold']</code></td>
+                            <td>Zweite Zeile mit dem Format 'bold' im 2. Kapitel.</td>
+                        </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <table>
+                        <tr>
+                            <td><code>child::*</code></td>
+                            <td>alle Kindelemente des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>child::pa</code></td>
+                            <td>alle <code>pa</code>-Kinder des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>child::text()</code></td>
+                            <td>alle Textknoten des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>.</code></td>
+                            <td>der gegenwärtige Knoten</td>
+                        </tr>
+                        <tr>
+                            <td><code>./*</code></td>
+                            <td>alle Unterelemente des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>./pa</code></td>
+                            <td>alle <code>pa</code>-Kinder des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>pa</code></td>
+                            <td>alle <code>pa</code>-Kinder des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>attribute::*</code></td>
+                            <td>alle Attribute des gegenwärtigen Knotens</td>
+                        </tr>
+                        <tr>
+                            <td><code>namespace::*</code></td>
+                            <td>alle Namespaces des gegenwärtigen Knotens</td>
+                        </tr>
+                        </table>
                     </section>
                 </section>
 
                 <section>
-                   <section>
-                       <h1>Transformation</h1>
-                   </section>
+                    <section>
+                        <h1>Transformation</h1>
+                    </section>
 
-                   <section>
-                       <h2></h2>
-                       <p>Kewles Transformers Bild ;)</p>
-                   </section>
+                    <section data-state="transformers">
+                        <div class="fragment"><h2>Umwandlung von XML-Dokumenten</h2></div>
+                    </section>
+
+                    <section>
+                        <h2>XSLT</h2>
+                        <p>
+                            XSL Transformation, kurz XSLT, ist eine vollständige Programmiersprache zur Transformation von XML-Dokumenten.
+                            Sie ist Teil der Extensible Stylesheet Language (kurz XSL, eine in XML notierte Familie von Transformationssprachen zur
+                            Definition von Layouts für XML-Dokumente).
+                        </p>
+                        <p>
+                            XSLT baut auf der logischen Baumstruktur eines XML-Dokumentes auf und dient zur Definition von Umwandlungsregeln.
+                            XSLT-Programme, sogenannte XSLT-Stylesheets, sind dabei selbst nach den Regeln des XML-Standards aufgebaut.
+                        </p>
+                        <p>
+                            Die Stylesheets werden von spezieller Software, den XSLT-Prozessoren, eingelesen,
+                            die mit diesen Anweisungen ein oder mehrere XML-Dokumente in das gewünschte Ausgabeformat umwandeln.
+                            XSLT-Prozessoren sind auch in vielen modernen Webbrowsern (Benutzung per Javascript) integriert.
+                        </p>
+                        <p>
+                            Das Ergebnis der Transformation kann XML oder ein beliebiges anderes Format sein, z.B. HTML, PDF, Text, ...
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument + XSLT-Stylesheet <br/ >=> XSLT-Prozessor = neues Dokument</h3>
+                        <p>
+                            <a href="stuff/xslt/result.htm" target="_blank">So sieht es aus...</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>XML-Dokument</h3>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;catalog&gt;
+    &lt;cd&gt;
+        &lt;title&gt;Empire Burlesque&lt;/title&gt;
+        &lt;artist&gt;Bob Dylan&lt;/artist&gt;
+        &lt;country&gt;USA&lt;/country&gt;
+        &lt;company&gt;Columbia&lt;/company&gt;
+        &lt;price&gt;10.90&lt;/price&gt;
+        &lt;year&gt;1985&lt;/year&gt;
+    &lt;/cd&gt;
+    ...
+&lt;/catalog&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                    <h3>XSLT-Stylesheet</h3>
+                    <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+&lt;xsl:template match=&quot;/&quot;&gt;
+  &lt;html&gt;&lt;body&gt;
+    &lt;h2&gt;My CD Collection&lt;/h2&gt;
+    &lt;table border=&quot;1&quot;&gt;
+      &lt;tr bgcolor=&quot;#9acd32&quot;&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select=&quot;catalog/cd&quot;&gt;
+      &lt;tr&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;title&quot; /&gt;&lt;/td&gt;&lt;td&gt;&lt;xsl:value-of select=&quot;artist&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/body&gt;&lt;/html&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+                    </code></pre>
+                </section>
                 </section>
 
                 <section>
@@ -678,8 +978,29 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     </section>
 
                     <section>
-                        <h2></h2>
-                        <p></p>
+                        <h2>Definition</h2>
+                        <p>
+                            Der W3C-Standard Extensible HyperText Markup Language (erweiterbare HTML; Abkürzung: XHTML) ist eine textbasierte Auszeichnungssprache zur Strukturierung und
+                            semantischen Auszeichnung von Inhalten wie Texten, Bildern und Hyperlinks in Dokumenten.
+                            Es ist eine Neuformulierung von HTML 4.01 in XML: Im Gegensatz zu HTML, welche mittels SGML definiert wurde, verwendet XHTML die strengere und einfacher zu
+                            parsende SGML-Teilmenge XML als Sprachgrundlage. XHTML-Dokumente genügen also den Syntaxregeln von XML.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Unterschiede zu HTML</h2>
+                        <p>Tags immer klein geschrieben: &lt;br /&gt;</p>
+                        <p>Start- und Ende-Tag oder Empty-Element-Tag: &lt;div&gt;&lt;/div&gt;, &lt;br /&gt;</p>
+                        <p>Attributwert in Anführungszeichen angeben: &lt;div class="bla"&gt;</p>
+                        <p>Attributname als -wert angeben: &lt;input type="radio" checked="checked" /&gt;</p>
+                        <p>name Attribut wird durch id ersetzt</p>
+                        <p>
+                            Vollständige Kopfdaten:
+                            <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;de&quot;&gt;
+                            </code></pre>
+                        </p>
                     </section>
                 </section>
 
@@ -717,8 +1038,50 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                         <p>Aggregation mehrere Newsfeeds z.B. per GoogleReader</p>
                     </section>
                     <section>
-                        <h2>Aufbau</h2>
-                        <p>tbd</p>
+                        <h2>Aufbau (Version 2.0)</h2>
+                        <pre><code class="xml">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+  &lt;channel&gt;
+    &lt;title&gt;Titel des Feeds&lt;/title&gt;
+    &lt;link&gt;URL der Webpr&auml;senz&lt;/link&gt;
+    &lt;description&gt;Kurze Beschreibung des Feeds&lt;/description&gt;
+    &lt;language&gt;Sprache des Feeds (z. B. &quot;de-de&quot;)&lt;/language&gt;
+    &lt;copyright&gt;Autor des Feeds&lt;/copyright&gt;
+    &lt;pubDate&gt;Erstellungsdatum(&quot;Tue, 8 Jul 2008 2:43:19&quot;)&lt;/pubDate&gt;
+    &lt;image&gt;
+      &lt;url&gt;URL einer einzubindenden Grafik&lt;/url&gt;
+      &lt;title&gt;Bildtitel&lt;/title&gt;
+      &lt;link&gt;URL, mit der das Bild verkn&uuml;pft ist&lt;/link&gt;
+    &lt;/image&gt;
+
+    &lt;item&gt;
+      &lt;title&gt;Titel des Eintrags&lt;/title&gt;
+      &lt;description&gt;Kurze Zusammenfassung des Eintrags&lt;/description&gt;
+      &lt;link&gt;Link zum vollst&auml;ndigen Eintrag&lt;/link&gt;
+      &lt;author&gt;Autor des Artikels, E-Mail-Adresse&lt;/author&gt;
+      &lt;guid&gt;Eindeutige Identifikation des Eintrages&lt;/guid&gt;
+      &lt;pubDate&gt;Datum des Items&lt;/pubDate&gt;
+    &lt;/item&gt;
+
+    &lt;item&gt;...&lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Verknüpfung aus Html</h2>
+                        <p>
+                            Man kann eine RSS-Datei in der HTML-Seite, deren Inhalte sie maschinenlesbar enthält, verknüpfen.
+                            Dieses Verfahren wurde für RSS nie spezifiziert,
+                            allerdings können fast alle Aggregatorprogramme dadurch selbständig die Adresse des RSS-Feeds eines Webangebots herausfinden (genannt auto-discovery).
+                            Moderne Browser ermöglichen es dem Seitenbesucher, den so verknüpften RSS-Feed zu abonnieren.
+                            Beispielsweise wird in der Adress- oder Statusleiste des Browser-Fensters eine RSS-Schaltfläche angezeigt.
+                        </p>
+                        <pre><code class="xml">
+&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot;
+   title=&quot;RSS&quot; href=&quot;http://www.example.net/feed.rss&quot; /&gt;
+                        </code></pre>
                     </section>
                     <section>
                         <h2>Atom</h2>
@@ -785,12 +1148,6 @@ Hier möchte ich gerneABSATZeinen Absatz haben
                     <section>
                         <h1>Misc / Q&A</h1>
                     </section>
-
-                    <section>
-                        <h2>Links</h2>
-                        <p>Wikipedia</p>
-                    </section>
-
 
                     <section data-state="questions">
                         <h1>Fragen?</h1>

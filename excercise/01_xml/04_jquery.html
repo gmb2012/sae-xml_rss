@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<input type="button" id="button" value="Übersetzung holen" />
+<script>
+$("#button").click(function() {
+	$.ajax(
+		{
+			url:"translation.xml",
+			dataType: "xml",
+			success:function(result) {
+				$(result).find("tu").each(function() { 
+					alert($(this).find("tuv[xml\\:lang=de]").text());
+				});
+			}
+		}
+	);
+}); 
+</script>
+</body>
+</html>

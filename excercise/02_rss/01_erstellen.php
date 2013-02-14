@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?php header("Content-Type: application/rss+xml"); ?>
+<?php echo "<?"; ?>xml version="1.0" encoding="UTF-8" standalone="yes"<?php echo "?"; ?>>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 <channel>
 <title>MYRSS - Testlauf</title>

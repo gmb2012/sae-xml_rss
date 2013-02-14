@@ -82,3 +82,7 @@ body.black {
 .reveal cite {
     font-style: italic;
 }
+
+.reveal code {
+    max-height: inherit;
+}

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<input type="button" id="button" value="RSS abrufen" />
+<div id="thefeed"></div>
+<script>
+$("#button").click(function() {
+	$.ajax(
+		{
+			url:"10_rss.xml",
+			dataType: "xml",
+			success:function(result) {
+				$("#thefeed").empty();
+				$(result).find("item").each(function() {
+					$("<h2>" + $(this).find("title").text() + "</h2>"
+						+ "<p>" + $(this).find("description").text() + "</p>"
+						+ "<p>" + new Date($(this).find("pubDate").text()).toLocaleString() +', &raquo; <a href="' + $(this).find("link").text() + '">details</a></p>').appendTo("#thefeed");
+				});
+			}
+		}
+	);
+}); 
+</script>
+</body>
+</html>

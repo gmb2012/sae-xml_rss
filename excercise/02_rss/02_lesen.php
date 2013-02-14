@@ -10,9 +10,6 @@
 
 // xml daten einlesen
 $xmldata = file_get_contents('10_rss.xml');
-// $xmldata = iconv('ISO-8859-1', 'UTF-8', $xmldata);
-// an den Wert des xml:lang-Attributes kommen wir sonst nicht ran ;)
-$xmldata = str_replace('xml:lang', 'lang', $xmldata);
 $XMLDocument = simplexml_load_string($xmldata, null, LIBXML_NOCDATA);
 
 foreach( $XMLDocument->xpath("//item") as $item) {
