@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<input type="button" id="button" value="Zeig mir die Titel" />
+<script>
+$("#button").click(function() {
+	$.ajax(
+		{
+			url:"05_jquery_self.xml",
+			dataType: "xml",
+			success:function(result) {
+				$("#movieList").empty();
+				$(result).find("movie").each(function() {
+					$("<h2>" + 
+						$(this).find("title[language='en']").text() + 
+						"</h2>")
+					.appendTo("#movieList");
+				});
+			}
+		}
+	);
+}); 
+</script>
+<div id="movieList"></div>
+</body>
+</html>

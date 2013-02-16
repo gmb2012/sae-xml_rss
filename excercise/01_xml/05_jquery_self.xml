@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<root>
+	<movie id="1">
+		<titles>
+			<title language="en">Die harder</title>
+			<title language="de">Stirb langsam</title>
+		</titles>
+		<publishYear>1995</publishYear>
+		<artists>
+			<artist>Bruce Willis</artist>
+		</artists>
+	</movie>
+	<movie id="2">
+		<titles>
+			<title language="en">Titanic</title>
+		</titles>
+		<publishYear>1998</publishYear>
+		<artists>
+			<artist>Leo</artist>
+			<artist>Kate</artist>
+		</artists>
+	</movie>
+	<movie id="3">
+		<titles>
+			<title language="en">Django</title>
+		</titles>
+		<publishYear>2012</publishYear>
+		<artists>
+			<artist>Leo</artist>
+			<artist>Jamie</artist>
+		</artists>
+	</movie>
+</root>
