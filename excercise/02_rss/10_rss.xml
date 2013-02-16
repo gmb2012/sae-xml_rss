@@ -1,47 +1,95 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 <channel>
-<title>SPIEGEL ONLINE - Schlagzeilen</title>
+<title>SPIEGEL ONLINE - Nachrichten</title>
 <link>http://www.spiegel.de</link>
 <description>Deutschlands führende Nachrichtenseite. Alles Wichtige aus Politik, Wirtschaft, Sport, Kultur, Wissenschaft, Technik und mehr.</description>
 <language>de</language>
-<pubDate>Fri, 26 Mar 2010 12:10:27 +0100</pubDate>
-<lastBuildDate>Fri, 26 Mar 2010 12:10:27 +0100</lastBuildDate>
+<pubDate>Sat, 16 Feb 2013 13:11:12 +0100</pubDate>
+<lastBuildDate>Sat, 16 Feb 2013 13:11:12 +0100</lastBuildDate>
 <image>
 <title>SPIEGEL ONLINE</title>
-
 <link>http://www.spiegel.de</link>
 <url>http://www.spiegel.de/static/sys/logo_120x61.gif</url>
 </image>
 <item>
-<title>Rücktritt von HRE-Chef Wieandt: Brav gescheitert</title>
-<link>http://www.spiegel.de/wirtschaft/unternehmen/0,1518,685722,00.html#ref=rss</link>
-
-<description>Der Rücktritt von Konzernchef Wieandt trifft die Hypo Real Estate zum schlechtesten Zeitpunkt. Im Auftreten wirkte er brav, doch intern hat er den Anfang zur Krisenbewältigung gemacht. Jetzt steht die Bank vor einer ungewissen Zukunft - Analysten munkeln schon über eine baldige Abwicklung.</description>
-<pubDate>Thu, 25 Mar 2010 20:17:04 +0100</pubDate>
-<guid>http://www.spiegel.de/wirtschaft/unternehmen/0,1518,685722,00.html</guid>
-<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-72135-thumbsmall-wysa.jpg" hspace="5" align="left" >Der Rücktritt von Konzernchef Wieandt trifft die Hypo Real Estate zum schlechtesten Zeitpunkt. Im Auftreten wirkte er brav, doch intern hat er den Anfang zur Krisenbewältigung gemacht. Jetzt steht die Bank vor einer ungewissen Zukunft - Analysten munkeln schon über eine baldige Abwicklung.]]></content:encoded>
-<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-72135-thumbsmall-wysa.jpg"/>
+<title>G-20-Treffen in Moskau: Deutschland blitzt mit Sparvorschlägen ab</title>
+<link>http://www.spiegel.de/wirtschaft/soziales/g20-treffen-in-moskau-deutschland-blitzt-mit-sparzielen-ab-a-883787.html#ref=rss</link>
+<description>Die USA haben sich durchgesetzt, Deutschland ist gescheitert - zumindest vorerst. Die Finanzminister der G-20-Staaten einigten sich in Moskau offenbar nicht auf die von Berlin geforderten Sparziele. Die Abschlusserklärung enthält stattdessen nur eine vage Formulierung. </description>
+<pubDate>Sat, 16 Feb 2013 11:51:00 +0100</pubDate>
+<guid>http://www.spiegel.de/wirtschaft/soziales/g20-treffen-in-moskau-deutschland-blitzt-mit-sparzielen-ab-a-883787.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-462006-thumbsmall-wbut.jpg" hspace="5" align="left" >Die USA haben sich durchgesetzt, Deutschland ist gescheitert - zumindest vorerst. Die Finanzminister der G-20-Staaten einigten sich in Moskau offenbar nicht auf die von Berlin geforderten Sparziele. Die Abschlusserklärung enthält stattdessen nur eine vage Formulierung. ]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-462006-thumbsmall-wbut.jpg"/>
 </item>
 <item>
-<title>BND-Mail: Kunduz-Affäre wird zum Problem der Kanzlerin</title>
-<link>http://www.spiegel.de/politik/deutschland/0,1518,685688,00.html#ref=rss</link>
-<description>Was wusste das Kanzleramt wann über das Kunduz-Bombardement? Eine E-Mail zeigt, dass die Regierungsspitze offenbar früh über mögliche zivile Opfer informiert war. Jetzt fordert die Opposition Aufklärung - in den Fokus gerät erstmals Kanzlerin Merkel.</description>
-<pubDate>Thu, 25 Mar 2010 17:18:51 +0100</pubDate>
-
-<guid>http://www.spiegel.de/politik/deutschland/0,1518,685688,00.html</guid>
-<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-72115-thumbsmall-tdrd.jpg" hspace="5" align="left" >Was wusste das Kanzleramt wann über das Kunduz-Bombardement? Eine E-Mail zeigt, dass die Regierungsspitze offenbar früh über mögliche zivile Opfer informiert war. Jetzt fordert die Opposition Aufklärung - in den Fokus gerät erstmals Kanzlerin Merkel.]]></content:encoded>
-<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-72115-thumbsmall-tdrd.jpg"/>
+<title>Aufräumarbeiten im Ural: Taucher suchen nach Meteoritenbrocken</title>
+<link>http://www.spiegel.de/wissenschaft/weltall/russland-taucher-suchen-nach-teilen-des-meteoriten-a-883775.html#ref=rss</link>
+<description>Der Meteoritenschauer über Russland hat Spuren hinterlassen: In einem See nahe Tscheljabinsk suchen Taucher nach Gesteinsbrocken. Noch immer werden Dutzende Verletzte in Krankenhäusern behandelt. 20.000 Helfer und Spezialteams sind im Ural im Einsatz.</description>
+<pubDate>Sat, 16 Feb 2013 10:45:00 +0100</pubDate>
+<guid>http://www.spiegel.de/wissenschaft/weltall/russland-taucher-suchen-nach-teilen-des-meteoriten-a-883775.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-461994-thumbsmall-fiaa.jpg" hspace="5" align="left" >Der Meteoritenschauer über Russland hat Spuren hinterlassen: In einem See nahe Tscheljabinsk suchen Taucher nach Gesteinsbrocken. Noch immer werden Dutzende Verletzte in Krankenhäusern behandelt. 20.000 Helfer und Spezialteams sind im Ural im Einsatz.]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-461994-thumbsmall-fiaa.jpg"/>
 </item>
 <item>
-<title>Krisenbank: HRE-Chef Wieandt tritt zurück</title>
-<link>http://www.spiegel.de/wirtschaft/unternehmen/0,1518,685693,00.html#ref=rss</link>
-<description>Paukenschlag bei der Krisenbank Hypo Real Estate: Konzernchef Axel Wieandt verlässt überraschend das Institut. Grund ist offenbar Streit mit dem Bankenrettungsfonds Soffin. Nachfolgerin wird Risikovorstand Manuela Better.</description>
-<pubDate>Thu, 25 Mar 2010 16:08:44 +0100</pubDate>
-<guid>http://www.spiegel.de/wirtschaft/unternehmen/0,1518,685693,00.html</guid>
-<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-3393-thumbsmall-omih.jpg" hspace="5" align="left" >Paukenschlag bei der Krisenbank Hypo Real Estate: Konzernchef Axel Wieandt verlässt überraschend das Institut. Grund ist offenbar Streit mit dem Bankenrettungsfonds Soffin. Nachfolgerin wird Risikovorstand Manuela Better.]]></content:encoded>
-
-<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-3393-thumbsmall-omih.jpg"/>
+<title>Meteoriten-Gefahr: Warten auf Gottes Hammer</title>
+<link>http://www.spiegel.de/wissenschaft/natur/einschlag-in-russland-welche-gefahren-von-meteoriten-drohen-a-883696.html#ref=rss</link>
+<description>Mit einem Meteoriteneinschlag wie in Russland hat kaum jemand gerechnet - dabei kreuzen Millionen kosmische Bomben die Erdbahn. Wie groß ist die Gefahr einer Kollision? Gibt es Einschläge in Deutschland? Antworten auf die wichtigsten Fragen zur Gefahr aus dem All.</description>
+<pubDate>Sat, 16 Feb 2013 07:47:00 +0100</pubDate>
+<guid>http://www.spiegel.de/wissenschaft/natur/einschlag-in-russland-welche-gefahren-von-meteoriten-drohen-a-883696.html</guid>
+<content:encoded><![CDATA[Mit einem Meteoriteneinschlag wie in Russland hat kaum jemand gerechnet - dabei kreuzen Millionen kosmische Bomben die Erdbahn. Wie groß ist die Gefahr einer Kollision? Gibt es Einschläge in Deutschland? Antworten auf die wichtigsten Fragen zur Gefahr aus dem All.]]></content:encoded>
+</item>
+<item>
+<title>US-Börsenaufsicht: Verdacht auf Insiderhandel beim Kauf von Heinz Ketchup</title>
+<link>http://www.spiegel.de/wirtschaft/unternehmen/sec-vermutet-insiderhandel-beim-kauf-von-heinz-ketchup-durch-buffett-a-883777.html#ref=rss</link>
+<description>Es ist der Mega-Deal des Jahres - aber womöglich lief er nicht ganz sauber ab. Für 28 Milliarden Dollar will der Starinvestor Warren Buffett den Ketchup-Hersteller Heinz übernehmen. Doch jetzt vermutet die US-Börsenaufsicht Insiderhandel und friert ein Konto in der Schweiz ein. </description>
+<pubDate>Sat, 16 Feb 2013 10:22:00 +0100</pubDate>
+<guid>http://www.spiegel.de/wirtschaft/unternehmen/sec-vermutet-insiderhandel-beim-kauf-von-heinz-ketchup-durch-buffett-a-883777.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-461935-thumbsmall-mkwg.jpg" hspace="5" align="left" >Es ist der Mega-Deal des Jahres - aber womöglich lief er nicht ganz sauber ab. Für 28 Milliarden Dollar will der Starinvestor Warren Buffett den Ketchup-Hersteller Heinz übernehmen. Doch jetzt vermutet die US-Börsenaufsicht Insiderhandel und friert ein Konto in der Schweiz ein. ]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-461935-thumbsmall-mkwg.jpg"/>
+</item>
+<item>
+<title>Machtkampf in der FDP: Lautsprecher Niebel droht die Abschaltung</title>
+<link>http://www.spiegel.de/politik/deutschland/entwicklungsminister-niebel-will-wieder-ins-fdp-praesidium-a-883598.html#ref=rss</link>
+<description>Er war Generalsekretär, jetzt ist er Entwicklungshilfeminister - und Dirk Niebel will weiter eine führende Rolle in der FDP spielen. Doch seine Chancen für eine Wiederwahl ins Präsidium stehen schlecht. Bei der Diskussion um die Zukunft von Parteichef Rösler hat er Position bezogen - die falsche. </description>
+<pubDate>Sat, 16 Feb 2013 07:30:00 +0100</pubDate>
+<guid>http://www.spiegel.de/politik/deutschland/entwicklungsminister-niebel-will-wieder-ins-fdp-praesidium-a-883598.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-461837-thumbsmall-vall.jpg" hspace="5" align="left" >Er war Generalsekretär, jetzt ist er Entwicklungshilfeminister - und Dirk Niebel will weiter eine führende Rolle in der FDP spielen. Doch seine Chancen für eine Wiederwahl ins Präsidium stehen schlecht. Bei der Diskussion um die Zukunft von Parteichef Rösler hat er Position bezogen - die falsche. ]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-461837-thumbsmall-vall.jpg"/>
+</item>
+<item>
+<title>Christian Wulff: Männlich, ledig, jung sucht...</title>
+<link>http://www.spiegel.de/politik/deutschland/christian-wulff-was-wird-aus-seiner-beruflichen-karriere-a-881684.html#ref=rss</link>
+<description>Vor einem Jahr das Aus: Weil gegen ihn ermittelt wurde, trat Christian Wulff vom Amt des Bundespräsidenten zurück. Eine neue Aufgabe hat er bisher nicht gefunden - aber als ehemaliges Staatsoberhaupt ist er auch nur in wenige Positionen vermittelbar. </description>
+<pubDate>Sat, 16 Feb 2013 12:19:00 +0100</pubDate>
+<guid>http://www.spiegel.de/politik/deutschland/christian-wulff-was-wird-aus-seiner-beruflichen-karriere-a-881684.html</guid>
+<content:encoded><![CDATA[Vor einem Jahr das Aus: Weil gegen ihn ermittelt wurde, trat Christian Wulff vom Amt des Bundespräsidenten zurück. Eine neue Aufgabe hat er bisher nicht gefunden - aber als ehemaliges Staatsoberhaupt ist er auch nur in wenige Positionen vermittelbar. ]]></content:encoded>
+</item>
+<item>
+<title>Ersatz für abziehende US-Truppen: Afghanistan bildet Soldatinnen für Sondereinheiten aus</title>
+<link>http://www.spiegel.de/politik/ausland/afghanistan-armee-trainiert-frauen-fuer-den-einsatz-in-sondereinheiten-a-883586.html#ref=rss</link>
+<description>Während die USA über Frauen an der Front streiten, trainiert die afghanische Armee bereits Soldatinnen für den Einsatz in Spezialeinheiten. Sie sollen bei Einsätzen gegen Aufständische helfen - und eine Lücke füllen, die der US-Abzug 2014 lassen wird.</description>
+<pubDate>Sat, 16 Feb 2013 12:10:00 +0100</pubDate>
+<guid>http://www.spiegel.de/politik/ausland/afghanistan-armee-trainiert-frauen-fuer-den-einsatz-in-sondereinheiten-a-883586.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-461392-thumbsmall-ixzd.jpg" hspace="5" align="left" >Während die USA über Frauen an der Front streiten, trainiert die afghanische Armee bereits Soldatinnen für den Einsatz in Spezialeinheiten. Sie sollen bei Einsätzen gegen Aufständische helfen - und eine Lücke füllen, die der US-Abzug 2014 lassen wird.]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-461392-thumbsmall-ixzd.jpg"/>
+</item>
+<item>
+<title>Geburtstag von Kim Jong Il: Nordkorea feiert den "Geliebten Führer"</title>
+<link>http://www.spiegel.de/politik/ausland/nordkoreaner-feiern-71-geburtstag-von-kim-jong-il-in-pjoengjang-a-883784.html#ref=rss</link>
+<description>Tausende von Blumensträußen, Menschenmassen auf den Straßen, unzählige Verbeugungen - Nordkorea feiert den Geburtstag des verstorbenen Diktators Kim Jong Il. In dieser Woche wurde auf Pjöngjangs Straßen schon einmal etwas ganz anderes bejubelt: der Atomtest.</description>
+<pubDate>Sat, 16 Feb 2013 12:31:00 +0100</pubDate>
+<guid>http://www.spiegel.de/politik/ausland/nordkoreaner-feiern-71-geburtstag-von-kim-jong-il-in-pjoengjang-a-883784.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-462000-thumbsmall-nltf.jpg" hspace="5" align="left" >Tausende von Blumensträußen, Menschenmassen auf den Straßen, unzählige Verbeugungen - Nordkorea feiert den Geburtstag des verstorbenen Diktators Kim Jong Il. In dieser Woche wurde auf Pjöngjangs Straßen schon einmal etwas ganz anderes bejubelt: der Atomtest.]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-462000-thumbsmall-nltf.jpg"/>
+</item>
+<item>
+<title>Taktische Analyse zum Bayern-Sieg: Die Schein-Mutigen aus Wolfsburg</title>
+<link>http://www.spiegel.de/sport/fussball/taktik-analyse-wolfsburg-gegen-bayern-muenchen-a-883780.html#ref=rss</link>
+<description>Wieder ein Sieg, wieder kein Gegentor: Der FC Bayern München demonstrierte auch beim VfL Wolfsburg seine unfassbare Auswärtsstärke. Doch die Taktikanalyse beweist: Der Gegner war kein leichtes Opfer. Zeigte er sogar, wie der Rekordmeister zu schlagen ist?</description>
+<pubDate>Sat, 16 Feb 2013 11:19:00 +0100</pubDate>
+<guid>http://www.spiegel.de/sport/fussball/taktik-analyse-wolfsburg-gegen-bayern-muenchen-a-883780.html</guid>
+<content:encoded><![CDATA[<img src="http://www.spiegel.de/images/image-461985-thumbsmall-gncm.jpg" hspace="5" align="left" >Wieder ein Sieg, wieder kein Gegentor: Der FC Bayern München demonstrierte auch beim VfL Wolfsburg seine unfassbare Auswärtsstärke. Doch die Taktikanalyse beweist: Der Gegner war kein leichtes Opfer. Zeigte er sogar, wie der Rekordmeister zu schlagen ist?]]></content:encoded>
+<enclosure type="image/jpeg" url="http://www.spiegel.de/images/image-461985-thumbsmall-gncm.jpg"/>
 </item>
 </channel>
 </rss>
