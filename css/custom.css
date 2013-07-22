@@ -1,17 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 
-.reveal {
-    width: 1400px;
-    height: 0px;
-}
-
-.reveal .state-background {
-    width: 2000px;
-    height: 2000px;
-}
 
 .reveal .slides {
-    max-width: 1350px;
     width: 1350px;
     height: 750px;
     left: 50px;
