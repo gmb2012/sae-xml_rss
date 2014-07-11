@@ -21,11 +21,22 @@
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' )
-                    + '.css" type="text/css" media="print">' );
-		</script>
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/pdf_custom.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -71,7 +82,7 @@
                             </script>
                         </p>
                         <p>
-                            Team Manager / Senior Software Developer HolidayCheck AG
+                            Development Manager / Consultant @ HolidayCheck AG
                         </p>
                         <p>
                             Informatik Studium 1999 - 2002<br />
@@ -159,6 +170,7 @@
                             <li>Einsatzgebiete</li>
                             <li>XHTML</li>
                             <li>RSS</li>
+                            <li>Podcasts</li>
                             <li>Übung RSS</li>
                             <li>Exkurs: JSON</li>
                             <li>Misc / Q&A</li>
@@ -1099,6 +1111,125 @@ TITLE {
                             Die aktuelle Version des Atom Syndication Formats ist der IETF-Entwurf vom 11. August 2005,
                             welcher von der IESG im August 2005 als Proposed Standard verabschiedet und im Dezember 2005 als RFC 4287 veröffentlicht wurde.
                             Die meisten größeren Feed-Anbieter arbeiten bereits daran, das Format zu unterstützen. Der MIME-Typ von Atom ist application/atom+xml.
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Podcasts</h1>
+                    </section>
+
+                    <section>
+                        <h2>Was ist ein Podcast?</h2>
+                        <p class="fragment">
+                            Podcasting bezeichnet das Anbieten abonnierbarer Mediendateien (Audio oder Video) über das Internet.
+                            Das Kofferwort setzt sich zusammen aus der englischen Rundfunkbezeichnung Broadcasting und der Bezeichnung für
+                            bestimmte tragbare MP3-Spieler, iPod, mit deren Erfolg Podcasts direkt verbunden sind und die heute stellvertretend für
+                            jegliche tragbare MP3-Spieler stehen. Ein einzelner Podcast besteht aus einer Serie von Medienbeiträgen (Episoden),
+                            die über einen News Feed (meistens RSS) automatisch bezogen werden können.
+                            Alternativ sind Podcasts auch unter dem markenneutralen Begriff Netcast bekannt.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Woraus besteht Podcast?</h2>
+                        <p class="fragment">
+                            Ein Podcast besteht aus einer Reihe von Medien-Dateien (Audio / Video / Text) und einer XML-Meta-Datei, die diese referenziert.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Podcast-XML</h2>
+                    <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;rss xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot; xmlns:itunesu=&quot;http://www.itunesu.com/feed&quot; version=&quot;2.0&quot;&gt;
+    &lt;channel&gt;
+        &lt;link&gt;http://www.YourSite.com&lt;/link&gt;
+        &lt;language&gt;en-us&lt;/language&gt;
+        &lt;copyright&gt;&amp;#xA9;2013&lt;/copyright&gt;
+        &lt;webMaster&gt;your@email.com (Your Name)&lt;/webMaster&gt;
+        &lt;managingEditor&gt;your@email.com (Your Name)&lt;/managingEditor&gt;
+        &lt;image&gt;
+            &lt;url&gt;http://www.YourSite.com/ImageSize300X300.jpg&lt;/url&gt;
+            &lt;title&gt;Title or description of your logo&lt;/title&gt;
+            &lt;link&gt;http://www.YourSite.com&lt;/link&gt;
+        &lt;/image&gt;
+        &lt;itunes:owner&gt;
+            &lt;itunes:name&gt;Your Name&lt;/itunes:name&gt;
+            &lt;itunes:email&gt;your@email.com&lt;/itunes:email&gt;
+        &lt;/itunes:owner&gt;
+        &lt;itunes:category text=&quot;Education&quot;&gt;
+            &lt;itunes:category text=&quot;Higher Education&quot; /&gt;
+        &lt;/itunes:category&gt;
+        &lt;itunes:keywords&gt;separate, by, comma, and, space&lt;/itunes:keywords&gt;
+        &lt;itunes:explicit&gt;no&lt;/itunes:explicit&gt;
+        &lt;itunes:image href=&quot;http://www.YourSite.com/ImageSize300X300.jpg&quot; /&gt;
+        &lt;atom:link href=&quot;http://www.YourSite.com/feed.xml&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot; /&gt;
+        &lt;pubDate&gt;Sun, 01 Jan 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;title&gt;Verbose title of the podcast&lt;/title&gt;
+        &lt;itunes:author&gt;College, school, or department owning the podcast&lt;/itunes:author&gt;
+        &lt;description&gt;Verbose description of the podcast.&lt;/description&gt;
+        &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+        &lt;itunes:subtitle&gt;Short description of the podcast - 255 character max.&lt;/itunes:subtitle&gt;
+        &lt;lastBuildDate&gt;Thu, 02 Feb 2012 00:00:00 EST&lt;/lastBuildDate&gt;
+        &lt;item&gt;
+            &lt;title&gt;Verbose title of the newer episode&lt;/title&gt;
+            &lt;description&gt;Verbose description of the episode.&lt;/description&gt;
+            &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+            &lt;itunes:subtitle&gt;Short description of the episode - 255 character max.&lt;/itunes:subtitle&gt;
+            &lt;itunesu:category itunesu:code=&quot;112&quot; /&gt;
+            &lt;enclosure url=&quot;http://www.YourSite.com/FILE.EXT&quot; type=&quot;audio/mpeg&quot; length=&quot;1&quot; /&gt;
+            &lt;guid&gt;http://www.YourSite.com/FILE.EXT&lt;/guid&gt;
+            &lt;itunes:duration&gt;H:MM:SS&lt;/itunes:duration&gt;
+            &lt;pubDate&gt;Thu, 04 Feb 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+            &lt;title&gt;Verbose title of the episode&lt;/title&gt;
+            &lt;description&gt;Verbose description of the episode.&lt;/description&gt;
+            &lt;itunes:summary&gt;Duplicate of above verbose description.&lt;/itunes:summary&gt;
+            &lt;itunes:subtitle&gt;Short description of the episode - 255 character max.&lt;/itunes:subtitle&gt;
+            &lt;itunesu:category itunesu:code=&quot;112&quot; /&gt;
+            &lt;enclosure url=&quot;http://www.YourSite.com/FILE.EXT&quot; type=&quot;audio/mpeg&quot; length=&quot;1&quot; /&gt;
+            &lt;guid&gt;http://www.YourSite.com/FILE.EXT&lt;/guid&gt;
+            &lt;itunes:duration&gt;H:MM:SS&lt;/itunes:duration&gt;
+            &lt;pubDate&gt;Thu, 02 Feb 2012 00:00:00 EST&lt;/pubDate&gt;
+        &lt;/item&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;
+                    </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Die einzelnen Episoden werden mit den item-Tags beschrieben</h3>
+                    </section>
+
+                    <section>
+                        <h2>Tools</h2>
+                        <p>
+                            Natürlich muss man nicht zwingend das XML selber schreiben, sondern kann das erledigen lassen.
+                            Z.B. durch <a href="http://podcastgen.sourceforge.net/" target="_blank">Podcast Generator</a>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Der eigene Podcast</h2>
+                        <ol>
+                            <li>Erstelle deine erste Episode in den Formaten: .m4a, .mp3, .mov, .mp4, .m4v, .pdf, and .epub</li>
+                            <li>
+                                Erstelle einen RSS Feed, der deinen Podcast beschreibt.<br />
+                                Dieser muss valides RSS 2.0 sein, die empfohlenen iTunes RSS Tags enthalten und auf deine Episode verweisen.
+                            </li>
+                            <li>Erstelle ein Cover in der Größe 1400 x 1400 Pixel als JPG oder PNG.</li>
+                            <li>Lege die Dateien auf einem öffentlichen Server mit Streaming-Support (byte-range support) ab.</li>
+                            <li>Veröffentliche die URL deines Podcasts bei iTunes (durchläuft einen Freigabeprozess)</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>Mehr Infos</h2>
+                        <p>
+                            <a href="https://www.apple.com/itunes/podcasts/specs.html" target="_blank">https://www.apple.com/itunes/podcasts/specs.html</a><br />
+                            <a href="https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml" target="_blank">https://odee.osu.edu/resourcecenter/digital-media-production/how-write-podcast-rss-xml</a>
                         </p>
                     </section>
                 </section>
