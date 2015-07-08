@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<movies>
+    <movie>
+        <title>Film 5</title>
+        <release>1985</release>
+        <actors>
+            <actor>Gina Wild</actor>
+            <actor>Sly</actor>
+            <actor>Danny</actor>
+        </actors>
+    </movie>
+    <movie>
+        <title>Film 2</title>
+        <release>1986</release>
+        <actors>
+            <actor>Bla</actor>
+            <actor>Blubb</actor>
+        </actors>
+    </movie>
+    <movie>
+        <title>Film 3</title>
+        <release>2010</release>
+        <actors>
+            <actor>Mr. AllByMySelf</actor>
+        </actors>
+    </movie>
+    <movie>
+        <title>Film 4</title>
+        <release>2012</release>
+        <actors>
+            <actor>No1</actor>
+            <actor>No2</actor>
+            <actor>No3</actor>
+            <actor>No4</actor>
+        </actors>
+    </movie>
+</movies>

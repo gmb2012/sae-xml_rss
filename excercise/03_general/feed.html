@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<input type="button" id="button" value="do it" />
+<script>
+$("#button").click(function() {
+	$.ajax(
+		{
+			url:"feed.php",
+			dataType: "xml",
+			success:function(result) {
+                // remove old content
+                $("#movieList").empty();
+
+                // do for each movie
+                $(result).find("movie").each(function() {
+                    // concatinate actors
+                    var actors = $(this).find("actor").map(
+                            function() {
+                                return $(this).text();
+                            }).get().join(", ");
+                    $("<tr>" +
+                            "<td>" + $(this).find("title").text() + "</td>" +
+                            "<td>" + $(this).find("release").text() + "</td>" +
+                            "<td>" + actors + "</td></tr>"
+                    )
+                            .appendTo("#movieList");
+                });
+			}
+		}
+	);
+}); 
+</script>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Jahr</th>
+    <th>Schauspieler</th>
+    </thead>
+    <tbody id="movieList">
+
+    </tbody>
+</table>
+</body>
+</html>

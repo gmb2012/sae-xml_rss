@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<input type="button" id="button" value="do it" />
+<script>
+$("#button").click(function() {
+	$.ajax(
+		{
+			url:"feedJson.php",
+			dataType: "json",
+			success:function(result) {
+                // remove old content
+                $("#movieList").empty();
+
+                // do for each movie
+                $(result).each(function() {
+                    $("<tr>" +
+                            "<td>" + this.title + "</td>" +
+                            "<td>" + this.release + "</td>" +
+                            "<td>" + this.actors.join(', ') + "</td></tr>"
+                    ).appendTo("#movieList");
+                });
+			}
+		}
+	);
+}); 
+</script>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Jahr</th>
+    <th>Schauspieler</th>
+    </thead>
+    <tbody id="movieList">
+
+    </tbody>
+</table>
+</body>
+</html>
