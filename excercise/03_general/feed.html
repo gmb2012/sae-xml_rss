@@ -21,8 +21,10 @@ $("#button").click(function() {
                             function() {
                                 return $(this).text();
                             }).get().join(", ");
+
                     $("<tr>" +
                             "<td>" + $(this).find("title").text() + "</td>" +
+                            "<td>" + $(this).find("description").text() + "</td>" +
                             "<td>" + $(this).find("release").text() + "</td>" +
                             "<td>" + actors + "</td></tr>"
                     )
@@ -36,6 +38,7 @@ $("#button").click(function() {
 <table>
     <thead>
     <th>Name</th>
+    <th>Beschreibung</th>
     <th>Jahr</th>
     <th>Schauspieler</th>
     </thead>
