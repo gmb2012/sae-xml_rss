@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <movies>
-    <movie>
+    <movie id="1">
         <title>Film 5</title>
+        <description>Super langweilig</description>
         <release>1985</release>
         <actors>
             <actor>Gina Wild</actor>
@@ -9,23 +10,26 @@
             <actor>Danny</actor>
         </actors>
     </movie>
-    <movie>
+    <movie id="2">
         <title>Film 2</title>
+        <description>Bester Film ever</description>
         <release>1986</release>
         <actors>
             <actor>Bla</actor>
             <actor>Blubb</actor>
         </actors>
     </movie>
-    <movie>
+    <movie  id="3">
         <title>Film 3</title>
+        <description>Bin 3x mal eingeschlafen</description>
         <release>2010</release>
         <actors>
             <actor>Mr. AllByMySelf</actor>
         </actors>
     </movie>
-    <movie>
+    <movie  id="4">
         <title>Film 4</title>
+        <description>Ganz toller Film</description>
         <release>2012</release>
         <actors>
             <actor>No1</actor>
